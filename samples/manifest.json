@@ -7,10 +7,34 @@
       "model": "facebook/opt-1.3b",
       "control": null,
       "words": 1021,
-      "z_at_build": 36.11,
+      "z_at_build": 36.111,
       "outcome": "mark_present",
       "key_fingerprint": "657b6f44851c",
       "seconds": 593.5
+    },
+    {
+      "id": "UM-D20A72",
+      "file": "UM-D20A72.txt",
+      "scheme": "default",
+      "model": "facebook/opt-1.3b",
+      "control": null,
+      "words": 1047,
+      "z_at_build": 29.6,
+      "outcome": "mark_present",
+      "key_fingerprint": "657b6f44851c",
+      "seconds": 752.0
+    },
+    {
+      "id": "UM-F54983",
+      "file": "UM-F54983.txt",
+      "scheme": "default",
+      "model": "facebook/opt-1.3b",
+      "control": null,
+      "words": 777,
+      "z_at_build": 29.942,
+      "outcome": "mark_present",
+      "key_fingerprint": "657b6f44851c",
+      "seconds": 396.1
     }
   ],
   "scheme_presets": {

@@ -21,9 +21,18 @@ the key, never the model weights.
 
 ## What is here
 
+Three texts, all marked with the same key and the same scheme, so a tool can be
+tried on more than one and the answers compared:
+
 | Sample | Words | Scheme | Model | z when it was made |
 |---|---|---|---|---|
 | `UM-344F7E.txt` | 1021 | `default` (window 5, 20 tournament layers) | `facebook/opt-1.3b` | 36.11 |
+| `UM-D20A72.txt` | 1047 | `default` | `facebook/opt-1.3b` | 29.60 |
+| `UM-F54983.txt` | 777 | `default` | `facebook/opt-1.3b` | 29.94 |
+
+Every one of them starts far above the detection line of 4.0, which is what
+makes them worth handing to a tool: whatever the score is afterwards, the mark
+was unmistakably there before.
 
 `manifest.json` carries the same facts in machine-readable form, plus the
 fingerprint of the key (a hash, not the key itself, so the file format is the
