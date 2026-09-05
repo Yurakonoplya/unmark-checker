@@ -104,7 +104,7 @@ def cmd_generate(args) -> int:
         lm = None
     else:
         print(f"loading {args.model} on {args.device} (first run downloads it)", flush=True)
-        lm = load_lm(args.model, device=args.device, num_threads=args.threads)
+        lm = load_lm(args.model, device=args.device, num_threads=args.threads, dtype=args.dtype)
 
     detector_lm = lm
     if detector_lm is None:
@@ -355,6 +355,10 @@ def build_parser() -> argparse.ArgumentParser:
     gen.add_argument("--seed", type=int, default=0, help="first seed; samples are seed-derived")
     gen.add_argument("--device", default="cpu", help="cpu or cuda (default cpu)")
     gen.add_argument("--threads", type=int, default=None, help="torch CPU threads")
+    gen.add_argument("--dtype", default="float32", choices=("float32", "bfloat16", "float16"),
+                     help="weight precision; bfloat16 halves memory and is what makes a "
+                          "1B-class model usable on a CPU. It does not touch the mark: "
+                          "g-values are computed from token ids, not from logits")
     gen.add_argument("--control", choices=("model", "human"), default=None,
                      help="write control texts that carry no mark: unmarked output of the "
                           "same model, or bundled human prose")

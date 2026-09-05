@@ -1,0 +1,33 @@
+{
+  "samples": [
+    {
+      "id": "UM-344F7E",
+      "file": "UM-344F7E.txt",
+      "scheme": "default",
+      "model": "facebook/opt-1.3b",
+      "control": null,
+      "words": 1021,
+      "z_at_build": 36.11,
+      "outcome": "mark_present",
+      "key_fingerprint": "657b6f44851c",
+      "seconds": 593.5
+    }
+  ],
+  "scheme_presets": {
+    "shallow": {
+      "ngram_len": 2,
+      "depth": 10,
+      "context_history_size": 256
+    },
+    "default": {
+      "ngram_len": 5,
+      "depth": 20,
+      "context_history_size": 1024
+    },
+    "deep": {
+      "ngram_len": 8,
+      "depth": 30,
+      "context_history_size": 1024
+    }
+  }
+}

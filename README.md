@@ -35,12 +35,17 @@ text to stay on your machine.
 ## Install (CPU, Python 3.10 or newer)
 
 ```bash
+git clone <REPO-URL> && cd unmark-checker
 python3 -m venv .venv
 source .venv/bin/activate
 # torch from the CPU index, otherwise pip pulls the multi-gigabyte CUDA build:
 pip install --index-url https://download.pytorch.org/whl/cpu torch
 pip install -e .
 ```
+
+`<REPO-URL>` is the public address of this repository, filled in when it is
+published. There is no package on PyPI: installing from a clone is the only
+supported way, so what you run is the code you can read.
 
 No GPU is needed. The first run downloads a small open-weights model (about 500
 MB for `gpt2`) and the embedding model used for meaning similarity (about 90 MB).
@@ -56,19 +61,38 @@ Everything derives from it: the same secret always reproduces the same samples
 and the same scores, and no one without it can score your samples or recognise
 them.
 
+## Check a tool in one minute, without generating anything
+
+`samples/` holds ready-made marked samples of about a thousand words each, and
+their key is printed in `samples/README.md` in plain sight. Hand one of them to
+the tool you want to test, save what it returns, and run:
+
+```bash
+export UNMARK_CHECKER_KEY='unmark-checker-public-sample-key-v1'
+unmark-checker check --sample samples/UM-344F7E.txt --returned cleaned.txt
+```
+
+That is the whole check. It needs no model download and finishes in seconds,
+because scoring reads the tokenizer and the key, never the weights.
+
+The key of those samples is public on purpose, and that is also their one
+weakness: a tool could recognise these exact texts and treat them specially. For
+a test nobody can anticipate, generate your own with your own key, as below. The
+published samples are the fast path; your own samples are the strict one.
+
 ## Three commands
 
 ### 1. `generate`: samples that carry your mark
 
 ```bash
-unmark-checker generate --num 2 --words 100 --scheme shallow --out samples
+unmark-checker generate --num 2 --words 100 --scheme shallow --out my-samples
 ```
 
 ```
-UM-A1C410    151 words  z=  8.84  mark_present 297.0s  -> samples/UM-A1C410.txt
-UM-796705    161 words  z=  9.44  mark_present 238.6s  -> samples/UM-796705.txt
+UM-A1C410    151 words  z=  8.84  mark_present 297.0s  -> my-samples/UM-A1C410.txt
+UM-796705    161 words  z=  9.44  mark_present 238.6s  -> my-samples/UM-796705.txt
 
-manifest: samples/manifest.json (no key is stored in it)
+manifest: my-samples/manifest.json (no key is stored in it)
 ```
 
 Every sample is scored as it is written, and that is not decoration: if the mark
@@ -81,7 +105,7 @@ sample came from, so `check` does not have to be told twice; it holds no key.
 Give the tool a sample, save exactly what it returned, then:
 
 ```bash
-unmark-checker check --sample samples/UM-A1C410.txt --returned cleaned.txt
+unmark-checker check --sample my-samples/UM-A1C410.txt --returned cleaned.txt
 ```
 
 Here is a real answer, on the sample above against a version of itself with every
@@ -192,8 +216,8 @@ about the shortest length worth trusting. If you can wait, generate 300.
 ## Controls: what the detector says on text that carries no mark
 
 ```bash
-unmark-checker generate --control human --words 150 --out control    # bundled human prose
-unmark-checker generate --control model --words 150 --out control    # same model, no mark
+unmark-checker generate --control human --words 150 --out my-control   # bundled human prose
+unmark-checker generate --control model --words 150 --out my-control   # same model, no mark
 ```
 
 "The mark is gone" is only meaningful against a baseline of how often the

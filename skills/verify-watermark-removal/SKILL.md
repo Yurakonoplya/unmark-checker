@@ -13,8 +13,9 @@ never removes anything.
 ## Setup, once
 
 ```bash
+git clone <REPO-URL> && cd unmark-checker   # public address, filled in at publication
 pip install --index-url https://download.pytorch.org/whl/cpu torch
-pip install -e .                      # from a clone of this repository
+pip install -e .                            # no PyPI package: install from the clone
 export UNMARK_CHECKER_KEY='a secret only the user has'
 ```
 
@@ -30,7 +31,7 @@ logged.
 
    ```bash
    unmark-checker generate --num 2 --words 100 --scheme shallow \
-       --model sshleifer/tiny-gpt2 --out samples
+       --model sshleifer/tiny-gpt2 --out my-samples
    ```
 
    Use `--model gpt2` instead when the sample must read as English, for example
@@ -44,7 +45,7 @@ logged.
 3. **Measure, one command:**
 
    ```bash
-   unmark-checker check --sample samples/UM-XXXXXX.txt --returned cleaned.txt
+   unmark-checker check --sample my-samples/UM-XXXXXX.txt --returned cleaned.txt
    ```
 
    Add `--json` when the numbers are going into a table or a report.

@@ -1,7 +1,7 @@
 # Your samples and your key stay yours: nothing produced locally is committed.
 # The key is read from the environment and is never written to a file by this
 # code, so there is nothing here to ignore for it.
-samples/
+my-*/
 out/
 *.egg-info/
 __pycache__/
