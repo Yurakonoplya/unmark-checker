@@ -1,0 +1,11 @@
+{
+  "slug": "example-cleaner",
+  "name": "example-cleaner.example.com",
+  "url": "https://example.com/cleaner",
+  "kind": "cleaner",
+  "fixture": true,
+  "access": "Example data. No such tool exists, nothing here was measured; the file shows how a tool that could not be run is recorded.",
+  "first_seen": "2026-09-05",
+  "not_run": "The form refused a text of this length (5 September 2026).",
+  "runs": []
+}

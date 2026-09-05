@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unmark-checker"
+version = "0.1.0"
+description = "Plant a SynthID-class text watermark with your own key and measure what a watermark-removal tool did to it."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "unmarkclaude.io contributors" }]
+keywords = ["watermark", "synthid", "detector", "benchmark", "text"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+  # transformers >= 4.46 ships SynthIDTextWatermarkingConfig and the logits
+  # processor this code builds the mark and the detector from.
+  "transformers>=4.46",
+  "torch>=2.2",
+  "accelerate>=0.30",
+  "safetensors>=0.4",
+]
+
+[project.urls]
+Homepage = "https://unmarkclaude.io/check"
+Results = "https://unmarkclaude.io/check/services"
+
+[project.scripts]
+unmark-checker = "unmark_checker.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+unmark_checker = ["data/*.txt"]

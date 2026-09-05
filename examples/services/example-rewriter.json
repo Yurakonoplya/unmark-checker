@@ -1,0 +1,55 @@
+{
+  "slug": "example-rewriter",
+  "name": "example-rewriter.example.com",
+  "url": "https://example.com/rewriter",
+  "kind": "rewriter",
+  "fixture": true,
+  "access": "Example data. No such tool exists, nothing here was measured; the file shows the shape a run is recorded in.",
+  "first_seen": "2026-09-05",
+  "runs": [
+    {
+      "id": "2026-09-05-um-1a2b3c",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-1A2B3C",
+      "sample_words": 1250,
+      "scheme": "shallow",
+      "kpi": {
+        "z": 1.23,
+        "outcome": "mark_gone",
+        "similarity": 0.81,
+        "facts_total": 23,
+        "facts_preserved": 21,
+        "facts_missing": ["2019", "Malacca"],
+        "verbatim_longest_run": 14,
+        "changed_share": 0.58,
+        "length_ratio": 0.97,
+        "kpi_version": 1
+      },
+      "note": "Default mode; output pasted back unchanged.",
+      "artifact": "results/2026-09-05/example-rewriter/UM-1A2B3C.txt"
+    },
+    {
+      "id": "2026-09-05-um-4d5e6f",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-4D5E6F",
+      "sample_words": 980,
+      "scheme": "deep",
+      "kpi": {
+        "z": 5.4,
+        "outcome": "mark_present",
+        "similarity": 0.95,
+        "facts_total": 18,
+        "facts_preserved": 18,
+        "facts_missing": [],
+        "verbatim_longest_run": 61,
+        "changed_share": 0.12,
+        "length_ratio": 1.01,
+        "kpi_version": 1
+      },
+      "note": "Same tool, longer sample: most of the text came back verbatim.",
+      "artifact": "results/2026-09-05/example-rewriter/UM-4D5E6F.txt"
+    }
+  ]
+}
