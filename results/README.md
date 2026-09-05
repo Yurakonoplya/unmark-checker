@@ -19,13 +19,16 @@ until then, `examples/services` shows the same command working):
 unmark-checker matrix --dir results/services --out results/matrix.md
 ```
 
-## Nothing measured is published here yet
+## First run: 5 September 2026
 
-This folder holds the format and no numbers. The table is published together
-with the first run, and every row it will hold is a run of ours on a sample of
-ours: the same three commands this repository ships, on tools anyone can reach.
-Until then, the shape is visible in `examples/services/`, and those two files are
-marked `fixture` precisely so nobody mistakes an example for a measurement.
+Fifteen free tools, three samples of ours (one per scheme depth), every output saved
+next to its service file. Seven tools returned a result: five returned the text with
+the mark still found; two returned it with the mark no longer found on any sample, and
+both lost facts on the way. Eight did not return a result (four cap free input below
+the sample length, four accepted the text and returned nothing); their service files
+carry the reason. Our own processing is measured on the same samples with the same
+ruler and sits in the same table. Scores use kpi_version 2. Rebuild `matrix.md` from
+this folder with the command above; it is the same table the site publishes.
 
 The published table lives at https://unmarkclaude.io/check/services. When a run
 lands there it lands here too, with the date it was made and the output it was

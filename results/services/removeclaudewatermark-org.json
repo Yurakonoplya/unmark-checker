@@ -1,0 +1,10 @@
+{
+  "slug": "removeclaudewatermark-org",
+  "name": "removeclaudewatermark.org",
+  "url": "https://removeclaudewatermark.org/",
+  "kind": "rewriter",
+  "access": "Free, no sign-up, input field accepts up to 60000 characters (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "not_run": "The form accepted the sample and passed the site security check, but the rewrite endpoint answered \"Service busy, try again in a moment.\" on twelve attempts across three samples between 20:35 and 21:45 on 5 September 2026.",
+  "runs": []
+}

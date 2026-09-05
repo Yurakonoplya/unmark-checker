@@ -1,0 +1,86 @@
+{
+  "slug": "watermarks-remover-rewrite",
+  "name": "guillaumemeyer/watermarks-remover, rewrite layer",
+  "url": "https://github.com/guillaumemeyer/watermarks-remover",
+  "kind": "open-source",
+  "access": "Free, MIT licence, run on our own machine. This is layer B of the project, the rewrite hook (rewrite_text.py), which needs a model of your own behind an OpenAI-compatible endpoint and is free only in the sense that the code is. Version v0.7.0, commit d9e9590, cloned 5 September 2026.",
+  "first_seen": "2026-09-05",
+  "runs": [
+    {
+      "id": "2026-09-05-um-a85aaa-layer-b",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-A85AAA",
+      "sample_words": 1029,
+      "scheme": "shallow",
+      "kpi": {
+        "z": 3.91,
+        "outcome": "uncertain",
+        "similarity": 0.8357980222737613,
+        "facts_total": 32,
+        "facts_preserved": 28,
+        "facts_missing": [
+          "Shakers",
+          "Gaffney's",
+          "United States",
+          "UK"
+        ],
+        "verbatim_longest_run": 34,
+        "changed_share": 0.5643192488262911,
+        "length_ratio": 0.7661971830985915,
+        "kpi_version": 2
+      },
+      "note": "Layer A plus layer B: rewrite_text.py against an OpenAI-compatible endpoint on open weights, default tactic \"paraphrase\", one candidate, one loop.",
+      "artifact": "bench/matrix/2026-09-05/watermarks-remover/UM-A85AAA.layer-b.txt"
+    },
+    {
+      "id": "2026-09-05-um-d150b2-layer-b",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-D150B2",
+      "sample_words": 992,
+      "scheme": "default",
+      "kpi": {
+        "z": -1.13,
+        "outcome": "mark_gone",
+        "similarity": 0.7871648269140348,
+        "facts_total": 3,
+        "facts_preserved": 1,
+        "facts_missing": [
+          "2",
+          "WW2"
+        ],
+        "verbatim_longest_run": 6,
+        "changed_share": 0.7668292682926829,
+        "length_ratio": 0.6409756097560976,
+        "kpi_version": 2
+      },
+      "note": "Layer A plus layer B: rewrite_text.py against an OpenAI-compatible endpoint on open weights, default tactic \"paraphrase\", one candidate, one loop.",
+      "artifact": "bench/matrix/2026-09-05/watermarks-remover/UM-D150B2.layer-b.txt"
+    },
+    {
+      "id": "2026-09-05-um-8b2588-layer-b",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-8B2588",
+      "sample_words": 1014,
+      "scheme": "deep",
+      "kpi": {
+        "z": -0.24,
+        "outcome": "mark_gone",
+        "similarity": 0.869324135927019,
+        "facts_total": 8,
+        "facts_preserved": 7,
+        "facts_missing": [
+          "1900"
+        ],
+        "verbatim_longest_run": 6,
+        "changed_share": 0.7166998011928429,
+        "length_ratio": 0.6829025844930418,
+        "kpi_version": 2
+      },
+      "note": "Layer A plus layer B: rewrite_text.py against an OpenAI-compatible endpoint on open weights, default tactic \"paraphrase\", one candidate, one loop.",
+      "artifact": "bench/matrix/2026-09-05/watermarks-remover/UM-8B2588.layer-b.txt"
+    }
+  ]
+}

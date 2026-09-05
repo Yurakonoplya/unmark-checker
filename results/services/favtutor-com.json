@@ -1,0 +1,81 @@
+{
+  "slug": "favtutor-com",
+  "name": "favtutor.com",
+  "url": "https://favtutor.com/claude-ai-watermark-remover",
+  "kind": "rewriter",
+  "access": "Free, no sign-up (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "runs": [
+    {
+      "id": "2026-09-05-um-a85aaa",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-A85AAA",
+      "sample_words": 1029,
+      "scheme": "shallow",
+      "kpi": {
+        "z": 3.87,
+        "outcome": "uncertain",
+        "similarity": 0.9189168712957335,
+        "facts_total": 32,
+        "facts_preserved": 31,
+        "facts_missing": [
+          "Gaffney's"
+        ],
+        "verbatim_longest_run": 11,
+        "changed_share": 0.5981220657276995,
+        "length_ratio": 0.7896713615023474,
+        "kpi_version": 2
+      },
+      "note": "Rewrite method left at the default \"paraphrase\" of four offered.",
+      "artifact": "bench/matrix/2026-09-05/favtutor-com/UM-A85AAA.txt"
+    },
+    {
+      "id": "2026-09-05-um-d150b2",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-D150B2",
+      "sample_words": 992,
+      "scheme": "default",
+      "kpi": {
+        "z": -0.96,
+        "outcome": "mark_gone",
+        "similarity": 0.7970734464670353,
+        "facts_total": 3,
+        "facts_preserved": 1,
+        "facts_missing": [
+          "2",
+          "WW2"
+        ],
+        "verbatim_longest_run": 7,
+        "changed_share": 0.8087804878048781,
+        "length_ratio": 0.7892682926829269,
+        "kpi_version": 2
+      },
+      "note": "Rewrite method left at the default \"paraphrase\" of four offered.",
+      "artifact": "bench/matrix/2026-09-05/favtutor-com/UM-D150B2.txt"
+    },
+    {
+      "id": "2026-09-05-um-8b2588",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-8B2588",
+      "sample_words": 1014,
+      "scheme": "deep",
+      "kpi": {
+        "z": -0.19,
+        "outcome": "mark_gone",
+        "similarity": 0.8857876998046956,
+        "facts_total": 8,
+        "facts_preserved": 8,
+        "facts_missing": [],
+        "verbatim_longest_run": 9,
+        "changed_share": 0.6113320079522863,
+        "length_ratio": 0.7773359840954275,
+        "kpi_version": 2
+      },
+      "note": "Rewrite method left at the default \"paraphrase\" of four offered.",
+      "artifact": "bench/matrix/2026-09-05/favtutor-com/UM-8B2588.txt"
+    }
+  ]
+}

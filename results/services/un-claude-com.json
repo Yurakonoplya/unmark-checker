@@ -1,0 +1,10 @@
+{
+  "slug": "un-claude-com",
+  "name": "un-claude.com",
+  "url": "https://un-claude.com/",
+  "kind": "rewriter",
+  "access": "Two free credits without sign-up. A 1029 word document costs two credits, so the free allowance covers one document (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "not_run": "Not run on 5 September 2026. The free scan works and reports no hidden characters found and the statistical watermark as presumed present. Starting the clean shows a notice that about 48 percent of the document will come back exactly as sent, and after confirming, the page showed no result within 500 seconds on two attempts.",
+  "runs": []
+}

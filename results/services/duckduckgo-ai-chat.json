@@ -1,0 +1,10 @@
+{
+  "slug": "duckduckgo-ai-chat",
+  "name": "Duck.ai",
+  "url": "https://duck.ai/",
+  "kind": "assistant",
+  "access": "Free chat without an account: one click accepts the terms and the chat opens (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "not_run": "Not run on 5 September 2026. The message with the sample went through, but the chat answered \"Duck.ai is temporarily unavailable\" instead of a rewrite, on all three samples, with 425 seconds of waiting each. The other free assistants ask for an account, and we do not open accounts.",
+  "runs": []
+}

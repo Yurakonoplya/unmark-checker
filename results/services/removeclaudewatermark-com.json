@@ -1,0 +1,35 @@
+{
+  "slug": "removeclaudewatermark-com",
+  "name": "removeclaudewatermark.com",
+  "url": "https://removeclaudewatermark.com/",
+  "kind": "rewriter",
+  "access": "Three free runs a month without sign-up, up to 2000 words each (read 5 September 2026). One sample came back; two later attempts the same day left the output field empty.",
+  "first_seen": "2026-09-05",
+  "runs": [
+    {
+      "id": "2026-09-05-um-a85aaa",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-A85AAA",
+      "sample_words": 1029,
+      "scheme": "shallow",
+      "kpi": {
+        "z": 11.55,
+        "outcome": "mark_present",
+        "similarity": 0.9702155837649173,
+        "facts_total": 32,
+        "facts_preserved": 30,
+        "facts_missing": [
+          "University of Cambridge",
+          "UK"
+        ],
+        "verbatim_longest_run": 173,
+        "changed_share": 0.2328638497652582,
+        "length_ratio": 0.9051643192488263,
+        "kpi_version": 2
+      },
+      "note": "Tab \"Remove watermark\", free run without sign-up.",
+      "artifact": "bench/matrix/2026-09-05/removeclaudewatermark-com/UM-A85AAA.txt"
+    }
+  ]
+}

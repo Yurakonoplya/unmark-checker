@@ -1,0 +1,10 @@
+{
+  "slug": "proofreaderpro-ai",
+  "name": "proofreaderpro.ai",
+  "url": "https://proofreaderpro.ai/claude-watermark-remover",
+  "kind": "rewriter",
+  "access": "Free tool page, input field labelled \"Paste 40 to 500 words\" (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "not_run": "Not run on 5 September 2026: the free limit is 500 words and the samples are 992 to 1029 words.",
+  "runs": []
+}

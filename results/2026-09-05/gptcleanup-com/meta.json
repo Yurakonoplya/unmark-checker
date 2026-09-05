@@ -1,0 +1,8 @@
+{
+  "дата": "2026-09-05",
+  "адрес": "https://www.gptcleanup.com/claude-watermark-cleaner",
+  "способ": "форма на сайте (редактор contenteditable), браузер без головы",
+  "режим": "кнопка «CLEAN», обработка идёт в браузере",
+  "что выбрано в форме": "ничего; страница 05.09.2026 утверждает «requires no registration and processes all content locally in your browser»",
+  "результат": "по всем трём образцам текст вернулся без изменений"
+}

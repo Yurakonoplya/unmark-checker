@@ -1,0 +1,10 @@
+{
+  "slug": "ninjahumanizer-com",
+  "name": "Ninja Humanizer",
+  "url": "https://ninjahumanizer.com/claude-watermark-remover",
+  "kind": "humanizer",
+  "access": "Free, no sign-up, counter under the field caps at 200 words (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "not_run": "Not run on 5 September 2026: the free counter stops at 200 of 200 words and the sample is 1029 words.",
+  "runs": []
+}

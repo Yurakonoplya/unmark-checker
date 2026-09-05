@@ -1,0 +1,10 @@
+{
+  "slug": "gpt-watermark-remover-com",
+  "name": "gpt-watermark-remover.com",
+  "url": "https://gpt-watermark-remover.com/",
+  "kind": "cleaner",
+  "access": "Free without sign-up, capped at 500 characters and five scans with a 60 second cooldown (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "not_run": "Not run on 5 September 2026: the free input is capped at 500 characters and the samples are 5281 to 5909 characters long. The remove button is also locked until a detect run is made.",
+  "runs": []
+}

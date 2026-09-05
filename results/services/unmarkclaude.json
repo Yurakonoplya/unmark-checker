@@ -1,0 +1,76 @@
+{
+  "slug": "unmarkclaude",
+  "name": "unmarkclaude.io",
+  "url": "https://unmarkclaude.io/",
+  "kind": "ours",
+  "access": "Our own processing, paid product. Run here through the command line of our core on the production model.",
+  "first_seen": "2026-09-05",
+  "runs": [
+    {
+      "id": "2026-09-05-um-a85aaa",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-A85AAA",
+      "sample_words": 1029,
+      "scheme": "shallow",
+      "kpi": {
+        "z": 2.35,
+        "outcome": "uncertain",
+        "similarity": 0.8924762908226282,
+        "facts_total": 32,
+        "facts_preserved": 32,
+        "facts_missing": [],
+        "verbatim_longest_run": 21,
+        "changed_share": 0.711737089201878,
+        "length_ratio": 0.92018779342723,
+        "kpi_version": 2
+      },
+      "note": "Core pipeline with default settings: verbatim run limit 4 words, entity check on, lost entity falls back to the original sentence.",
+      "artifact": "bench/matrix/2026-09-05/unmarkclaude/UM-A85AAA.txt"
+    },
+    {
+      "id": "2026-09-05-um-d150b2",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-D150B2",
+      "sample_words": 992,
+      "scheme": "default",
+      "kpi": {
+        "z": 0.83,
+        "outcome": "mark_gone",
+        "similarity": 0.7390469700447484,
+        "facts_total": 3,
+        "facts_preserved": 3,
+        "facts_missing": [],
+        "verbatim_longest_run": 10,
+        "changed_share": 0.9141463414634147,
+        "length_ratio": 0.9248780487804878,
+        "kpi_version": 2
+      },
+      "note": "Core pipeline with default settings: verbatim run limit 4 words, entity check on, lost entity falls back to the original sentence.",
+      "artifact": "bench/matrix/2026-09-05/unmarkclaude/UM-D150B2.txt"
+    },
+    {
+      "id": "2026-09-05-um-8b2588",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-8B2588",
+      "sample_words": 1014,
+      "scheme": "deep",
+      "kpi": {
+        "z": 1.12,
+        "outcome": "mark_gone",
+        "similarity": 0.8143773774338923,
+        "facts_total": 8,
+        "facts_preserved": 8,
+        "facts_missing": [],
+        "verbatim_longest_run": 23,
+        "changed_share": 0.8538767395626242,
+        "length_ratio": 0.8946322067594433,
+        "kpi_version": 2
+      },
+      "note": "Core pipeline with default settings: verbatim run limit 4 words, entity check on, lost entity falls back to the original sentence.",
+      "artifact": "bench/matrix/2026-09-05/unmarkclaude/UM-8B2588.txt"
+    }
+  ]
+}

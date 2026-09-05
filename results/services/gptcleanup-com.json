@@ -1,0 +1,76 @@
+{
+  "slug": "gptcleanup-com",
+  "name": "gptcleanup.com",
+  "url": "https://www.gptcleanup.com/claude-watermark-cleaner",
+  "kind": "cleaner",
+  "access": "Free, no sign-up. The page states the text is processed in the browser (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "runs": [
+    {
+      "id": "2026-09-05-um-a85aaa",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-A85AAA",
+      "sample_words": 1029,
+      "scheme": "shallow",
+      "kpi": {
+        "z": 19.55,
+        "outcome": "mark_present",
+        "similarity": 1.0,
+        "facts_total": 32,
+        "facts_preserved": 32,
+        "facts_missing": [],
+        "verbatim_longest_run": 1065,
+        "changed_share": 0.0,
+        "length_ratio": 1.0,
+        "kpi_version": 2
+      },
+      "note": "Button \"CLEAN\". Output identical to the sample, character for character.",
+      "artifact": "bench/matrix/2026-09-05/gptcleanup-com/UM-A85AAA.txt"
+    },
+    {
+      "id": "2026-09-05-um-d150b2",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-D150B2",
+      "sample_words": 992,
+      "scheme": "default",
+      "kpi": {
+        "z": 37.96,
+        "outcome": "mark_present",
+        "similarity": 0.9999999689752427,
+        "facts_total": 3,
+        "facts_preserved": 3,
+        "facts_missing": [],
+        "verbatim_longest_run": 1025,
+        "changed_share": 0.0,
+        "length_ratio": 1.0,
+        "kpi_version": 2
+      },
+      "note": "Button \"CLEAN\". Output identical to the sample, character for character.",
+      "artifact": "bench/matrix/2026-09-05/gptcleanup-com/UM-D150B2.txt"
+    },
+    {
+      "id": "2026-09-05-um-8b2588",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-8B2588",
+      "sample_words": 1014,
+      "scheme": "deep",
+      "kpi": {
+        "z": 35.31,
+        "outcome": "mark_present",
+        "similarity": 1.0,
+        "facts_total": 8,
+        "facts_preserved": 8,
+        "facts_missing": [],
+        "verbatim_longest_run": 1006,
+        "changed_share": 0.0,
+        "length_ratio": 1.0,
+        "kpi_version": 2
+      },
+      "note": "Button \"CLEAN\". Output identical to the sample, character for character.",
+      "artifact": "bench/matrix/2026-09-05/gptcleanup-com/UM-8B2588.txt"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "overchat-ai",
+  "name": "Overchat AI",
+  "url": "https://overchat.ai/text/claude-watermark-remover",
+  "kind": "rewriter",
+  "access": "Advertised as free while a promotion lasts, 20 runs a day (read 5 September 2026).",
+  "first_seen": "2026-09-05",
+  "not_run": "Not run on 5 September 2026: the button on the tool page started nothing. The result area stayed empty for 300 seconds and the page sent no network request, on our sample and on the site own sample alike, over three attempts.",
+  "runs": []
+}

@@ -1,0 +1,76 @@
+{
+  "slug": "watermarks-remover-clean",
+  "name": "guillaumemeyer/watermarks-remover, character cleaning",
+  "url": "https://github.com/guillaumemeyer/watermarks-remover",
+  "kind": "open-source",
+  "access": "Free, MIT licence, run on our own machine. This is layer A of the project, the deterministic character scrub (clean_text.py), the part that needs no model and no key. Version v0.7.0, commit d9e9590, cloned 5 September 2026.",
+  "first_seen": "2026-09-05",
+  "runs": [
+    {
+      "id": "2026-09-05-um-a85aaa-layer-a",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-A85AAA",
+      "sample_words": 1029,
+      "scheme": "shallow",
+      "kpi": {
+        "z": 19.55,
+        "outcome": "mark_present",
+        "similarity": 1.0,
+        "facts_total": 32,
+        "facts_preserved": 32,
+        "facts_missing": [],
+        "verbatim_longest_run": 1065,
+        "changed_share": 0.0,
+        "length_ratio": 1.0,
+        "kpi_version": 2
+      },
+      "note": "Layer A only: deterministic character scrub, clean_text.py with default options. The tool reported 0 characters removed and 0 replaced.",
+      "artifact": "bench/matrix/2026-09-05/watermarks-remover/UM-A85AAA.layer-a.txt"
+    },
+    {
+      "id": "2026-09-05-um-d150b2-layer-a",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-D150B2",
+      "sample_words": 992,
+      "scheme": "default",
+      "kpi": {
+        "z": 37.96,
+        "outcome": "mark_present",
+        "similarity": 0.9999999689752427,
+        "facts_total": 3,
+        "facts_preserved": 3,
+        "facts_missing": [],
+        "verbatim_longest_run": 1025,
+        "changed_share": 0.0,
+        "length_ratio": 1.0,
+        "kpi_version": 2
+      },
+      "note": "Layer A only: deterministic character scrub, clean_text.py with default options. The tool reported 0 characters removed and 0 replaced.",
+      "artifact": "bench/matrix/2026-09-05/watermarks-remover/UM-D150B2.layer-a.txt"
+    },
+    {
+      "id": "2026-09-05-um-8b2588-layer-a",
+      "date": "2026-09-05",
+      "by": "us",
+      "sample_id": "UM-8B2588",
+      "sample_words": 1014,
+      "scheme": "deep",
+      "kpi": {
+        "z": 35.31,
+        "outcome": "mark_present",
+        "similarity": 1.0,
+        "facts_total": 8,
+        "facts_preserved": 8,
+        "facts_missing": [],
+        "verbatim_longest_run": 1006,
+        "changed_share": 0.0,
+        "length_ratio": 1.0,
+        "kpi_version": 2
+      },
+      "note": "Layer A only: deterministic character scrub, clean_text.py with default options. The tool reported 0 characters removed and 0 replaced.",
+      "artifact": "bench/matrix/2026-09-05/watermarks-remover/UM-8B2588.layer-a.txt"
+    }
+  ]
+}
