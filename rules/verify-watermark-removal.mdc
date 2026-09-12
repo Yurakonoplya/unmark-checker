@@ -1,0 +1,28 @@
+---
+description: Verify that a watermark-removal step actually removed the mark before reporting success
+alwaysApply: true
+---
+
+# Verify watermark removal
+
+When a tool, script or service claims to have removed a statistical text
+watermark, measure the claim before repeating it. Use `unmark-checker` on a
+sample whose key is ours.
+
+- Fastest path: use a sample shipped in `samples/` with the open key printed in
+  `samples/README.md`. For a strict test make your own:
+  `unmark-checker generate --num 2 --words 100 --out my-samples` (the key comes
+  from `UNMARK_CHECKER_KEY` and never goes into a file).
+- Run the tool on the sample, save exactly what it returned, then measure:
+  `unmark-checker check --sample samples/UM-XXXXXX.txt --returned cleaned.txt`
+  (add `--key` when the sample is your own)
+- Report the outcome with its cost: meaning similarity, facts kept, longest
+  verbatim run, share of words changed, length ratio. A mark that vanished along
+  with half the text is not a success.
+- Report `uncertain` as its own answer. Rounding the grey zone to a yes or a no
+  is a lie in one direction or the other.
+- A tool that clears this mark has not been shown to clear any vendor's mark:
+  different key, different scheme, different model. Never write that a text is
+  undetectable or proven human-written.
+- This rule is about measuring, not cleaning. Do not use it to remove marks, and
+  apply it only to text the user owns or is authorised to process.
