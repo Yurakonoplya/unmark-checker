@@ -1,0 +1,23 @@
+{
+  "name": "unmark-checker",
+  "owner": {
+    "name": "unmarkclaude.io contributors",
+    "url": "https://github.com/Yurakonoplya/unmark-checker"
+  },
+  "description": "Open checker for Claude watermark removers: one skill that verifies a removal on a sample with a known key.",
+  "plugins": [
+    {
+      "name": "unmark-checker",
+      "source": "./",
+      "version": "0.1.0",
+      "author": {
+        "name": "unmarkclaude.io contributors",
+        "url": "https://github.com/Yurakonoplya/unmark-checker"
+      },
+      "homepage": "https://github.com/Yurakonoplya/unmark-checker#readme",
+      "repository": "https://github.com/Yurakonoplya/unmark-checker",
+      "license": "MIT",
+      "category": "content"
+    }
+  ]
+}

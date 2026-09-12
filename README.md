@@ -35,7 +35,7 @@ text to stay on your machine.
 ## Install (CPU, Python 3.10 or newer)
 
 ```bash
-git clone <REPO-URL> && cd unmark-checker
+git clone https://github.com/Yurakonoplya/unmark-checker && cd unmark-checker
 python3 -m venv .venv
 source .venv/bin/activate
 # torch from the CPU index, otherwise pip pulls the multi-gigabyte CUDA build:
@@ -43,8 +43,7 @@ pip install --index-url https://download.pytorch.org/whl/cpu torch
 pip install -e .
 ```
 
-`<REPO-URL>` is the public address of this repository, filled in when it is
-published. There is no package on PyPI: installing from a clone is the only
+There is no package on PyPI: installing from a clone is the only
 supported way, so what you run is the code you can read.
 
 No GPU is needed. The first run downloads a small open-weights model (about 500

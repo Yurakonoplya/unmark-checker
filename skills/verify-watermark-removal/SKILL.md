@@ -13,7 +13,7 @@ never removes anything.
 ## Setup, once
 
 ```bash
-git clone <REPO-URL> && cd unmark-checker   # public address, filled in at publication
+git clone https://github.com/Yurakonoplya/unmark-checker && cd unmark-checker
 pip install --index-url https://download.pytorch.org/whl/cpu torch
 pip install -e .                            # no PyPI package: install from the clone
 export UNMARK_CHECKER_KEY='a secret only the user has'

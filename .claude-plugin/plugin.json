@@ -1,0 +1,20 @@
+{
+  "name": "unmark-checker",
+  "displayName": "Unmark Checker",
+  "version": "0.1.0",
+  "description": "Verify what a watermark-removal tool did to a text: plant a SynthID-class watermark with your own key, run the tool, measure mark, meaning, facts, verbatim runs and length.",
+  "author": {
+    "name": "unmarkclaude.io contributors",
+    "url": "https://github.com/Yurakonoplya/unmark-checker"
+  },
+  "homepage": "https://github.com/Yurakonoplya/unmark-checker#readme",
+  "repository": "https://github.com/Yurakonoplya/unmark-checker",
+  "license": "MIT",
+  "keywords": [
+    "watermark",
+    "synthid",
+    "detector",
+    "benchmark",
+    "claude"
+  ]
+}

@@ -29,6 +29,8 @@ dependencies = [
 
 [project.urls]
 Homepage = "https://unmarkclaude.io/check"
+Repository = "https://github.com/Yurakonoplya/unmark-checker"
+Issues = "https://github.com/Yurakonoplya/unmark-checker/issues"
 Results = "https://unmarkclaude.io/check/services"
 
 [project.scripts]
