@@ -45,7 +45,8 @@ installing anything is not an option.
     survive.
   - `not_our_text`, when fewer than half the content words of the returned text
     come from the sample: no score is reported at all, because a score on a text
-    with no known starting point means nothing.
+    with no known starting point means nothing. Report it as its own answer. It
+    is never evidence that the mark is gone.
 - Report the cost next to any of the first three outcomes: meaning similarity,
   facts kept, longest verbatim run, share of words changed, length ratio. A mark
   that vanished along with half the text is not a success. A `not_our_text` run

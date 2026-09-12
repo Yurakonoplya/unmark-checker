@@ -47,7 +47,7 @@ Install once. A CPU is enough, Python 3.10 or newer:
 
 ```bash
 git clone https://github.com/Yurakonoplya/unmark-checker && cd unmark-checker
-git checkout v0.1.4              # the revision this page describes
+git checkout v0.1.5              # the revision this page describes
 pip install --index-url https://download.pytorch.org/whl/cpu torch
 pip install -e .                 # no PyPI package: install from the clone
 read -rs UNMARK_CHECKER_KEY && export UNMARK_CHECKER_KEY
@@ -59,6 +59,11 @@ command that behaves differently from this page is worse than no page.
 The key is typed at the `read` prompt, which echoes nothing and writes nothing to
 the shell history. Keep it in the environment, never in a file and never in a
 command that gets logged. The key is the whole basis of the check.
+
+If the tool under test runs on the same machine, start it with
+`env -u UNMARK_CHECKER_KEY <tool> ...`: a process that inherits the key could
+score the sample itself and shape its output to it, which is exactly what the
+measurement is meant to rule out.
 
 Then four steps.
 

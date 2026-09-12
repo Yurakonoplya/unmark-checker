@@ -44,7 +44,7 @@ text to stay on your machine.
 
 ```bash
 git clone https://github.com/Yurakonoplya/unmark-checker && cd unmark-checker
-git checkout v0.1.4   # the revision this README describes; main moves on
+git checkout v0.1.5   # the revision this README describes; main moves on
 python3 -m venv .venv
 source .venv/bin/activate
 # torch from the CPU index, otherwise pip pulls the multi-gigabyte CUDA build:
@@ -66,8 +66,12 @@ read -rs UNMARK_CHECKER_KEY && export UNMARK_CHECKER_KEY
 ```
 
 Everything derives from it: the same secret always reproduces the same samples
-and the same scores, and no one without it can score your samples or recognise
-them.
+and the same scores, and no one without it can score your samples.
+
+If the tool you are testing runs on this same machine, start it with
+`env -u UNMARK_CHECKER_KEY`: a process that inherits the key can score the sample
+itself and tune what it returns, which is the one thing this measurement exists
+to rule out.
 
 ## Check a tool in one minute, without generating anything
 
