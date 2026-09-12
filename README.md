@@ -227,9 +227,13 @@ machine, with your key.
 
 - **Claude Code:** copy `skills/verify-watermark-removal/` into `.claude/skills/`
   of your project (or your personal `~/.claude/skills/`). The skill runs the
-  three commands above and reports the outcome with its cost.
+  three commands above and reports the outcome with its cost. `SKILL.md` is a
+  plain Agent Skill (frontmatter plus instructions, no paths outside its own
+  folder), so the same file drops unchanged into any agent or collection that
+  reads that format.
 - **Cursor:** copy `integrations/cursor/verify-watermark-removal.mdc` into
-  `.cursor/rules/`.
+  `.cursor/rules/`. It is `alwaysApply: false`: the rule attaches when the
+  question is about checking a removal, not on every request.
 
 Both do one thing: when a tool claims a text was cleaned, they check the claim
 instead of repeating it.
