@@ -1,6 +1,6 @@
 ---
 description: Measure whether a watermark-removal or "humanizer" step actually removed a statistical text watermark before reporting or repeating the claim. Apply when a tool, script or service says it cleaned a text, or when asked which remover to trust and how to test one.
-globs: **/*
+globs:
 alwaysApply: false
 ---
 
