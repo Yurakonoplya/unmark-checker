@@ -60,7 +60,7 @@ the fast path rather than the strict one.
 For a test nobody can anticipate, make your own:
 
 ```bash
-export UNMARK_CHECKER_KEY='a secret only you have'
+read -rs UNMARK_CHECKER_KEY && export UNMARK_CHECKER_KEY   # nothing echoed, nothing in the history
 unmark-checker generate --num 2 --words 800 --scheme default \
     --model facebook/opt-1.3b --dtype bfloat16 --out my-samples
 ```

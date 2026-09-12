@@ -161,7 +161,7 @@ a long surviving run deserves a second run rather than a headline.
 pip install --index-url https://download.pytorch.org/whl/cpu torch
 pip install -e .
 
-export UNMARK_CHECKER_KEY='a secret only you have'
+read -rs UNMARK_CHECKER_KEY && export UNMARK_CHECKER_KEY   # nothing echoed, nothing in the history
 unmark-checker generate --num 3 --words 300 --scheme shallow --out my-samples
 # hand my-samples/UM-XXXXXX.txt to the tool, save what it returns
 unmark-checker check --sample my-samples/UM-XXXXXX.txt --returned cleaned.txt --json

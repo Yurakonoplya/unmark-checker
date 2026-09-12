@@ -184,10 +184,16 @@ def cmd_generate(args) -> int:
         )
         return 2
     if planted < args.num:
+        rejected = [e for e in written if e["outcome"] != thresholds.MARK_PRESENT]
+        listing = "\n".join(
+            f"  {e['id']} ({e['file']}): {e['outcome']}, z={e['z_at_build']}"
+            for e in rejected
+        )
         print(
-            f"\nwarning: the mark planted in {planted} of {args.num} samples. Use "
-            "only the samples above the detection line; short texts carry less "
-            "evidence, so ask for more words if this repeats.",
+            f"\nwarning: the mark planted in {planted} of {args.num} samples. Hand a "
+            "tool only the samples the manifest records as mark_present; short texts "
+            "carry less evidence, so ask for more words if this repeats.\n"
+            f"not usable for a check ({len(rejected)}):\n{listing}",
             file=sys.stderr,
         )
     return 0
@@ -243,10 +249,9 @@ def _describe(kpi_row: dict, sample_words: int, returned_words: int) -> str:
 
 
 def cmd_check(args) -> int:
-    from .detector import KeyAwareDetector
-    from .kpi import compute
-    from .watermark import load_tokenizer
-
+    # The heavy imports live below the `not_our_text` branch: that answer is
+    # decided by word overlap alone, and loading a tokenizer to print it would be
+    # a wait for nothing.
     sample_text = _read(args.sample)
     returned_text = _read(args.returned)
     sample_path = Path(args.sample) if args.sample != "-" else None
@@ -260,6 +265,15 @@ def cmd_check(args) -> int:
         print(
             "warning: this sample was generated with a different key. The score below "
             "will be noise, not a measurement.",
+            file=sys.stderr,
+        )
+    known_outcome = known.get("outcome")
+    if known_outcome and known_outcome != thresholds.MARK_PRESENT:
+        print(
+            f"warning: the manifest records this sample as '{known_outcome}', not "
+            f"'{thresholds.MARK_PRESENT}': the mark never planted in it, so whatever "
+            "comes out below says nothing about the tool. Measure a sample the manifest "
+            "records as mark_present. Measuring this one anyway.",
             file=sys.stderr,
         )
 
@@ -287,6 +301,10 @@ def cmd_check(args) -> int:
                 "to a known starting point means nothing."
             )
         return 0
+
+    from .detector import KeyAwareDetector
+    from .kpi import compute
+    from .watermark import load_tokenizer
 
     lm = load_tokenizer(model_id)
     scheme = build_scheme(scheme_name, secret)

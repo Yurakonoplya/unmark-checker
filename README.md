@@ -44,6 +44,7 @@ text to stay on your machine.
 
 ```bash
 git clone https://github.com/Yurakonoplya/unmark-checker && cd unmark-checker
+git checkout v0.1.4   # the revision this README describes; main moves on
 python3 -m venv .venv
 source .venv/bin/activate
 # torch from the CPU index, otherwise pip pulls the multi-gigabyte CUDA build:
@@ -57,11 +58,11 @@ supported way, so what you run is the code you can read.
 No GPU is needed. The first run downloads a small open-weights model (about 500
 MB for `gpt2`) and the embedding model used for meaning similarity (about 90 MB).
 
-Your key is a string you choose. Keep it in the environment so it stays out of
-your shell history:
+Your key is a string you choose. Type it at a prompt that echoes nothing, so it
+stays out of your shell history:
 
 ```bash
-export UNMARK_CHECKER_KEY='a secret only you have'
+read -rs UNMARK_CHECKER_KEY && export UNMARK_CHECKER_KEY
 ```
 
 Everything derives from it: the same secret always reproduces the same samples
@@ -102,10 +103,14 @@ UM-796705    161 words  z=  9.44  mark_present 238.6s  -> my-samples/UM-796705.t
 manifest: my-samples/manifest.json (no key is stored in it)
 ```
 
-Every sample is scored as it is written, and that is not decoration: if the mark
-did not plant, nothing measured on these texts means anything, so the command
-says so and exits with code 2. The manifest remembers which scheme and model each
-sample came from, so `check` does not have to be told twice; it holds no key.
+Every sample is scored as it is written, and that is not decoration: nothing
+measured on a text where the mark did not plant means anything. If none of the
+samples took the mark, the command says so and exits with code 2. If some did and
+some did not, it warns, names the ones it did not plant in and exits with code 0,
+leaving the files where they are: hand a tool only the samples the manifest
+records as `mark_present`. The manifest remembers that outcome along with the
+scheme and the model each sample came from, so `check` does not have to be told
+twice; it holds no key.
 
 ### 2. `check`: what a tool did to a sample
 
@@ -186,11 +191,12 @@ table of ours are comparable line by line.
 - **Does not claim:** anything about a specific vendor's watermark. A vendor uses
   a different model and unpublished scheme parameters, and no experiment without
   their key can test their detector, this one included.
-- One direction does carry: a tool that **leaves this mark in place** is very
-  unlikely to remove a vendor's mark either, because both live in the same place,
-  which words got chosen. The reverse does not carry: clearing this mark is not
-  evidence of clearing anyone else's, and "undetectable" is not a word this tool
-  will ever print.
+- One direction is worth stating, as an inference and not as a result: a tool that
+  **leaves this mark in place** is unlikely to remove a vendor's mark either. This
+  is an inference from where both marks live (word choice), not a measurement; the
+  measurement covers one key, one scheme, one model and one sample. The reverse
+  does not carry at all: clearing this mark is not evidence of clearing anyone
+  else's, and "undetectable" is not a word this tool will ever print.
 - One run on one sample is a measurement, not a verdict on a product. Run several
   samples, several lengths, and all three scheme presets before saying anything
   general.
