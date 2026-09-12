@@ -21,8 +21,10 @@ the key, never the model weights.
 
 ## What is here
 
-Three texts, all marked with the same key and the same scheme, so a tool can be
-tried on more than one and the answers compared:
+One sample is enough for a check: `UM-344F7E.txt` is the one every published
+run uses, so a number measured on it compares directly with the published
+table. The other two are spares, marked with the same key and the same scheme,
+for anyone who wants a second run on a different text:
 
 | Sample | Words | Scheme | Model | z when it was made |
 |---|---|---|---|---|

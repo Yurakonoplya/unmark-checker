@@ -1,15 +1,23 @@
 # unmark-checker
 
-Plant a statistical text watermark of the SynthID-Text class in a text **with your
-own key**, hand that text to any tool that claims to remove watermarks, and
-measure what came back: is the mark still there, and what did the text cost.
+Put any "Claude watermark remover", "Gemini watermark remover" or humanizer to
+the kind of watermark it claims to remove, and get a number back instead of a
+promise.
 
-Nobody can tell you whether a given text still carries a *vendor's* watermark:
-the key that shaped it belongs to the vendor. But you can hold a key of your own.
-Mark a text with it, and you know exactly what went in, so you can say exactly
-what is left, and a detector that knows the key is the strongest detector that
-can exist for that text. That is the trick this repository is built on, and it is
-the only honest way to test these tools.
+Claude and Gemini both leave a statistical watermark in the text they write.
+Anthropic describes Claude's as a version of SynthID-Text; Google's Gemini
+carries SynthID-Text itself. ChatGPT, by OpenAI's own provenance guide as of
+September 2026, does not mark text this way at all. The scheme is public and
+lives in Hugging Face `transformers`; what the vendors keep is the key. So this
+tool plants the same scheme in a text **with a key of your own**, hands the text
+to the remover, and measures what came back: is the mark still there, and what
+did the text cost in meaning, facts and length.
+
+Nobody outside a vendor can read that vendor's mark, and neither can this tool.
+But a key of your own gives you something the vendor's detector cannot: you know
+exactly what went in, so you can say exactly what is left, and a detector that
+knows the key is the strongest one that can exist for that text. That is the
+whole trick, and it is the only honest way to test these tools.
 
 ## Who this is for
 
