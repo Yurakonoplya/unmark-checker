@@ -1,7 +1,7 @@
 {
   "name": "unmark-checker",
   "displayName": "Unmark Checker",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Verify what a watermark-removal tool did to a text: plant a SynthID-class watermark with your own key, run the tool, measure mark, meaning, facts, verbatim runs and length.",
   "author": {
     "name": "unmarkclaude.io contributors",

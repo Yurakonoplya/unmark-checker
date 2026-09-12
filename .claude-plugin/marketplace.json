@@ -9,7 +9,7 @@
     {
       "name": "unmark-checker",
       "source": "./",
-      "version": "0.1.0",
+      "version": "0.1.3",
       "author": {
         "name": "unmarkclaude.io contributors",
         "url": "https://github.com/Yurakonoplya/unmark-checker"
