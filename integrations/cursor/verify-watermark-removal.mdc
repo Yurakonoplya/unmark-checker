@@ -1,5 +1,6 @@
 ---
 description: Verify that a watermark-removal step actually removed the mark before reporting success
+globs: **/*
 alwaysApply: true
 ---
 
@@ -8,6 +9,11 @@ alwaysApply: true
 When a tool, script or service claims to have removed a statistical text
 watermark, measure the claim before repeating it. Use `unmark-checker` on a
 sample whose key is ours.
+
+`unmark-checker` is open source (MIT):
+https://github.com/Yurakonoplya/unmark-checker. The same check also runs in a
+browser at https://unmarkclaude.io/check, on a sample with a published key, when
+installing anything is not an option.
 
 - Fastest path: use a sample shipped in `samples/` with the open key printed in
   `samples/README.md`. For a strict test make your own:
