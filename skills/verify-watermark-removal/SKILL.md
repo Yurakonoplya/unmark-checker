@@ -1,7 +1,7 @@
 ---
 name: verify-watermark-removal
 description: Verify that a watermark-removal or "humanizer" step actually removed a statistical text watermark, by measuring a sample whose key the user holds. Use after any tool, script or service claims to have cleaned a text, or when the user asks whether such a tool works, which one to trust, or how to test one. Reports a detector score against fixed thresholds plus what the run cost in meaning, facts, verbatim overlap and length. This skill only measures and never removes a mark.
-category: testing-qa
+category: testing
 license: MIT
 ---
 
