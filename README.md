@@ -256,6 +256,26 @@ machine, with your key.
 Both do one thing: when a tool claims a text was cleaned, they check the claim
 instead of repeating it.
 
+## A tool run and measured in one command
+
+Handing the sample over by hand is fine for a web form, but a tool you can run
+yourself deserves a shorter loop. `integrations/watermarks-remover/run.py` gives
+[guillaumemeyer/watermarks-remover](https://github.com/guillaumemeyer/watermarks-remover)
+the sample, takes back what it returns and scores it, either through the HTTP
+service that project documents for other apps or by calling the scripts in a
+checkout:
+
+```bash
+python3 integrations/watermarks-remover/run.py --checkout ~/watermarks-remover
+python3 integrations/watermarks-remover/run.py --service   # http://127.0.0.1:8765
+```
+
+The adapter labels which of that tool's two layers actually ran, because a
+statistical mark lives in word choice and its character scrub is not aimed there:
+a number from the scrub alone is a reading of that layer, not a verdict on the
+tool. [integrations/watermarks-remover/README.md](integrations/watermarks-remover/README.md)
+has a worked run of both layers.
+
 ## What is in here
 
 ```
@@ -263,7 +283,7 @@ src/unmark_checker/    the library: scheme, generator, detector, metrics, matrix
 docs/service-file.md   the data format results are recorded and published in
 examples/services/     two example service files, marked as examples
 results/               our own runs, with the output every number came from
-skills/, integrations/ the editor and agent wrappers
+skills/, integrations/ the editor and agent wrappers, and the watermarks-remover runner
 METHODOLOGY.md         the experiment, its thresholds and its caveats
 ORIGIN.md              which files are copies of the hosted checker's code
 ```
